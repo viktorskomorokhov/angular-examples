@@ -14,19 +14,20 @@
 </ng-template>
 
 
-<ng-template #third let-name let-lastName="lastName">
+<ng-template #third let-name="name" let-lastName="lastName">
     <p>Привет {{name }} {{lastName}}</p>
 </ng-template>
 
-<div class="teamplte" [ngTemplateOutlet]="third" [ngTemplateOutletContext]="{
- $implicit:'Viktor',
+<div class="teamplte" [ngTemplateOutlet]="third" [ngTemplateOutletContext]="
+{
+ name:'Viktor',
  lastName:'Skomorokhov'
 
 }"></div>
-<!-- <div class="block">
+<div class="block">
     <app-card [templateWithCOntext]="third" [context]="{
- $implicit:'Viktor',
+ name:'Viktor',
  lastName:'Skomorokhov'
 
 }"></app-card>
-</div> -->
+</div>

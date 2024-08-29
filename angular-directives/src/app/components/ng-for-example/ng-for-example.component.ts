@@ -44,8 +44,6 @@ export class NgForExampleComponent implements DoCheck {
     return of(items).pipe(delay(5000));
   }
   trackByFn(index: number, item:string): number {
-    console.log(index + item);
-    
     return index;
   }
   pushItem() {

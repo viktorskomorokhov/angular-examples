@@ -1,6 +1,6 @@
+import { NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardComponent } from '../card/card.component';
-import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-ng-outlet',

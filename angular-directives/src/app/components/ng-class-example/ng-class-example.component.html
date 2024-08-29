@@ -13,9 +13,9 @@
     
     <div class="block">
         <h2> class/NgClass</h2>
-        <p [ngClass]="currentClasses" >NgClass</p>
+        <p [ngClass]="currentClasses" class="" >NgClass</p>
         <p [class]="currentClasses" >Class</p>
-        <p [ngClass]="'notActive'" [class]="'active'">я буду синим</p>
+        <p  class="active" [ngClass]="'notActive'">я буду синим</p>
         <p [class.active]="active" >Будет класс актив при active:true</p>
         <button (click)="setCurrentClasses()">Ссылка</button>
         <button (click)="mutateCurrentClasses()">Мутировать</button>

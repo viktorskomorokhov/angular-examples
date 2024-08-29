@@ -18,5 +18,5 @@ enum EFeature {
 export class NgSwitchExampleComponent {
   public featureEnum = EFeature
   feature = EFeature.first
-  withError: 'first' | 'second' | 'third' = 'first'
+  withError: 'first' | 'second' | 'third' | '' = 'first'
 }

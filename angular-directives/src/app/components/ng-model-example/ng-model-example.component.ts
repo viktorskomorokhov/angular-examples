@@ -18,7 +18,7 @@ export class NgModelExampleComponent implements DoCheck {
   }
   oneWay = 'одна сторона'
   twoWay = 'две стороны'
-  selectedValue = 'Angular'
+  selectedValue = 'Angular123'
   frameworks = items
   // items = [
   //   'Angular',

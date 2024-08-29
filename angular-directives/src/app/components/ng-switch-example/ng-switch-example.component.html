@@ -6,23 +6,25 @@
             <p *ngSwitchCase="featureEnum.third">третья фича</p>
             <p *ngSwitchDefault> По умолчанию</p>
         </div>
-        <!-- <div [ngSwitch]="withError">
+        <div [ngSwitch]="withError">
             <p *ngSwitchCase="'first'"> первая фича</p>
             <p *ngSwitchCase="'second'">вторая фича</p>
             <p *ngSwitchCase="'third'">третья фича</p>
             <p *ngSwitchDefault> По умолчанию</p>
-        </div> -->
+        </div>
     </div>
-    <!-- <div class="block">
+    <div class="block">
         @switch (feature) {
-        @case (featureEnum.first) {первая фича}
+        @case (featureEnum.first) {
+            первая фича
+        }
         @case (featureEnum.second) {вторая фича}
         @case (featureEnum.third) {третья фича}
         @default {
         <p>default</p>
         }
         }
-    </div> -->
+    </div>
     <div class="btns">
         <button (click)="feature = featureEnum.first">Первая</button>
         <button (click)="feature = featureEnum.second">Вторая</button>
@@ -31,3 +33,4 @@
     </div>
 
 </div>
+@defer () {}
