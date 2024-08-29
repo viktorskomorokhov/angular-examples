@@ -1,0 +1,23 @@
+
+<div class="wrapper">
+    <div class="block">
+        <p [ngClass]="'string'">Строка</p>
+        <p [ngClass]="['array','arrayToo']">Массив строк</p>
+        <p [ngClass]="active ? 'active' : 'notActive'" class="active">Тернарное выражение NgClass <input type="checkbox" [(ngModel)]="active"></p> 
+        <p [ngClass]="{
+        'key': true,
+        'other-key':true
+    }">Объект</p>
+    
+    </div>
+    
+    <div class="block">
+        <h2> class/NgClass</h2>
+        <p [ngClass]="currentClasses" >NgClass</p>
+        <p [class]="currentClasses" >Class</p>
+        <p [ngClass]="'notActive'" [class]="'active'">я буду синим</p>
+        <p [class.active]="active" >Будет класс актив при active:true</p>
+        <button (click)="setCurrentClasses()">Ссылка</button>
+        <button (click)="mutateCurrentClasses()">Мутировать</button>
+    </div>
+</div>

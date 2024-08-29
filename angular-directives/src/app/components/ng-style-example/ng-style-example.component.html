@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="block">
+        <p [ngStyle]="{'color': 'blue'}">Объект (шаблон)</p>
+        <p [ngStyle]="style">Объект (класс)</p>
+        <p [ngStyle]=" {'font-style': active ? 'italic' : 'normal'}" class="active">Тернарное выражение ngStyle <input
+                type="checkbox" [(ngModel)]="active"></p>
+
+    </div>
+        
+    <div class="block">
+        <h2> class/ngStyle</h2>
+        <p [ngStyle]="currentStyles" >ngStyle</p>
+        <p [style]="currentStyles" >Class</p>
+        <p [ngStyle]="{'color': 'blue'}" [style]="{'color': 'red'}">я буду синим</p>
+        <p [style.color]="'red'">я буду красным</p>
+        <button (click)="setCurrentStyles()">Ссылка</button>
+        <button (click)="mutateCurrentStyles()">Мутировать</button>
+    </div>
+</div>
