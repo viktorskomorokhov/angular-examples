@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="block">
+        <div [ngSwitch]="feature">
+            <p *ngSwitchCase="featureEnum.first"> первая фича</p>
+            <p *ngSwitchCase="featureEnum.second">вторая фича</p>
+            <p *ngSwitchCase="featureEnum.third">третья фича</p>
+            <p *ngSwitchDefault> По умолчанию</p>
+        </div>
+    </div>
+    <!-- <div class="block">
+        @switch (feature) {
+        @case (featureEnum.first) {первая фича}
+        @case (featureEnum.second) {вторая фича}
+        @case (featureEnum.third) {третья фича}
+        @default {
+        <p>default</p>
+        }
+        }
+    </div> -->
+    <div class="btns">
+        <button (click)="feature = featureEnum.first">Первая</button>
+        <button (click)="feature = featureEnum.second">Вторая</button>
+        <button (click)="feature = featureEnum.third">Третья</button>
+        <button (click)="feature = featureEnum.default">По умолчанию</button>
+    </div>
+
+</div>

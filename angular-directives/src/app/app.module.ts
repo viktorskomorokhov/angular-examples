@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgClassExampleComponent } from './components/ng-class-example/ng-class-example.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NgStyleExampleComponent } from "./components/ng-style-example/ng-style-example.component";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { NgStyleExampleComponent } from "./components/ng-style-example/ng-style-
     AppRoutingModule,
     MatTabsModule,
     NgClassExampleComponent,
-    NgStyleExampleComponent
+    NgStyleExampleComponent,
+    BrowserAnimationsModule
 ],
   providers: [],
   bootstrap: [AppComponent]

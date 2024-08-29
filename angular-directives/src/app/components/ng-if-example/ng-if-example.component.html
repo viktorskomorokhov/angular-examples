@@ -30,17 +30,36 @@
             {{ds}}
         </div>
         <ng-template class="loading" #loading>Загрузка</ng-template>
-        <input type="checkbox" [(ngModel)]="longCondition">
     </div>
     <div class="block">
-        @if (permission === 'admin') {
+        <div class="block">
+            @if (permission === 'admin') {
             <p>Это страница админа</p>
-        } @else if (permission === 'user') {
+            } @else if (permission === 'user') {
             <p>Это страница юзера</p>
-        } @else if (permission === 'guest') {
+            } @else if (permission === 'guest') {
             <p>Это страница гостя</p>
-        } @else {
+            } @else {
             <p>Вы кто? </p>
-        }
+            }
+        </div>
+        <div class="block">
+            <div class="permission" *ngIf="permission ==='admin';else userPermission">
+                <p>Это страница админа</p>
+            </div>
+            <ng-template #userPermission>
+                <div *ngIf="permission === 'user';else guestPermission">
+                    <p>Это страница юзера</p>
+                </div>
+            </ng-template>
+            <ng-template #guestPermission>
+                <div *ngIf="permission === 'guest';else who">
+                    <p>Это страница гостя</p>
+                </div>
+            </ng-template>
+            <ng-template #who>
+                <p>Вы кто? </p>
+            </ng-template>
+        </div>
     </div>
 </div>

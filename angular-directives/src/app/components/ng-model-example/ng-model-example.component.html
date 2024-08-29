@@ -4,8 +4,8 @@
     <div class="block"> <input type="text" [(ngModel)]="twoWay"> {{twoWay}}</div>
     <input type="text" placeholder="no changeDetection">
     <select [(ngModel)]="selectedValue">
-        <option *ngFor="let item of items" [value]="item">
-             {{item}}
+        <option *ngFor="let framework of frameworks" [value]="framework">
+             {{framework}}
         </option>
     </select>
     <!-- <form>

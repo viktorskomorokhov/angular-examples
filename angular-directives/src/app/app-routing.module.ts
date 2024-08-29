@@ -18,6 +18,18 @@ const routes: Routes = [
     path:"ngif",
     loadComponent: () => import('./components/ng-if-example/ng-if-example.component').then(c => c.NgIfExampleComponent)
   },
+  {
+    path:"ngfor",
+    loadComponent: () => import('./components/ng-for-example/ng-for-example.component').then(c => c.NgForExampleComponent)
+  },
+  {
+    path:"ngswitch",
+    loadComponent: () => import('./components/ng-switch-example/ng-switch-example.component').then(c => c.NgSwitchExampleComponent)
+  },
+  {
+    path:"ngtemplate",
+    loadComponent: () => import('./components/ng-outlet/ng-outlet.component').then(c => c.NgOutletComponent)
+  },
 
 ];
 
