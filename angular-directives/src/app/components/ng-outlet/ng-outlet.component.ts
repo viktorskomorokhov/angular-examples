@@ -9,6 +9,5 @@ import { NgTemplateOutlet } from '@angular/common';
   templateUrl: './ng-outlet.component.html',
   styleUrl: './ng-outlet.component.scss'
 })
-export class NgOutletComponent {
-
+export class NgOutletComponent { 
 }
