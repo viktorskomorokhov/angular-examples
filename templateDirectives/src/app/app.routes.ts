@@ -12,6 +12,7 @@ import { TagsComponent } from './ng-content-example/tags/tags.component';
 import { NgTemplateTagComponent } from './ng-template-example/ng-template-tag/ng-template-tag.component';
 import { NgTemplateUsageExampleComponent } from './ng-template-example/ng-template-usage-example/ng-template-example.component';
 import { HostListenerUsageComponent } from './host-listener-example/host-listener-usage/host-listener-usage.component';
+import { HttpClietUsageComponent } from './http-client/http-client-layout/http-cliet-usage/http-cliet-usage.component';
 
 export const routes: Routes = [
   {
@@ -131,4 +132,18 @@ export const routes: Routes = [
         }
       ]
   },
+  {
+    path:'http-client',
+    loadComponent: () => import('./http-client/http-client-layout/http-client-layout.component').then((c) => c.HttpClientLayoutComponent),
+    children: [
+      {
+        path:'usage',
+        component:HttpClietUsageComponent
+      },
+      {
+        path:'**',
+        redirectTo:'usage'
+      }
+    ]
+  }
 ];
