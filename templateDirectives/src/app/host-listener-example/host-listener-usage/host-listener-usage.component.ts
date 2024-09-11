@@ -29,39 +29,39 @@ export class HostListenerUsageComponent  {
  
 
   counter = 0
-  zone = inject(NgZone)
- @HostListener('mousemove')
- onMoluseMove():void {
-  this.zone.runOutsideAngular(() => {
-    this.counter += 1
-  })
+//   zone = inject(NgZone)
+//  @HostListener('mousemove')
+//  onMoluseMove():void {
+//   this.zone.runOutsideAngular(() => {
+//     this.counter += 1
+//   })
 
- }
- onMouseClick(e:any):void {
-  console.log(e);
+//  }
+//  onMouseClick(e:any):void {
+//   console.log(e);
   
- }
- @HostListener('mouseenter') 
- onEnter():void {
-  console.log('onEnter');
+//  }
+//  @HostListener('mouseenter') 
+//  onEnter():void {
+//   console.log('onEnter');
   
-  this.counter += 1
+//   this.counter += 1
 
- }
- @HostListener('mouseleave') 
- onLeave():void {
-  console.log('onleave');
-  this.counter += 1
+//  }
+//  @HostListener('mouseleave') 
+//  onLeave():void {
+//   console.log('onleave');
+//   this.counter += 1
 
- }
- @HostListener('document:keydown', ['$event'])
- updateValue(event: KeyboardEvent) {
-   console.log(event);
+//  }
+//  @HostListener('document:keydown', ['$event'])
+//  updateValue(event: KeyboardEvent) {
+//    console.log(event);
    
- }
+//  }
  @HostListener('window:keydown.escape', [
   '$event',
-  'escape was clicked'
+  '$message'
 ])
  updateValueFiltered(event: KeyboardEvent, message:string) {
   console.log(message);
