@@ -1,0 +1,10 @@
+[build]
+    base="templateDirectives"
+    command="npm run build"
+    publish="dist/browser"
+
+    [[redirects]]
+    from="/*"
+    to="/index.html"
+    status=200
+
