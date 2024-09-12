@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 export interface IToDo {
   userId: number;
   id: number;
-  title: 'delectus aut autem';
-  completed: false;
+  title: string;
+  completed: boolean;
 }
 @Component({
   selector: 'app-async-example',
