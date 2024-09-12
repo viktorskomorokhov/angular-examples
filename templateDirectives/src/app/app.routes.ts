@@ -13,6 +13,7 @@ import { MultiplieDirectivesExampleComponent } from './pages/ng-container-exampl
 import { AsyncExample } from './pages/ng-container-example/async-example/async-example.component';
 import { ContainerExamplesComponent } from './pages/ng-container-example/container-examples/container-examples.component';
 import { ContainerTagsComponent } from './pages/ng-container-example/container-tags/container-tags.component';
+import { UserListComponent } from './pages/http-client/http-client-layout/user-list/user-list.component';
 
 
 export const routes: Routes = [
@@ -140,6 +141,10 @@ export const routes: Routes = [
       {
         path:'usage',
         component:HttpClietUsageComponent
+      },
+      {
+        path:'users-list',
+        component:UserListComponent
       },
       {
         path:'**',

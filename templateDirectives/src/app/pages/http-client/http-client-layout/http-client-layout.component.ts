@@ -18,6 +18,13 @@ import { TuiTabs } from '@taiga-ui/kit';
         >
           Использование и подключение
         </button>
+        <button
+          tuiTab
+          routerLink="/http-client/users-list"
+          routerLinkActive="router-link-active"
+        >
+         Вывод списка юзеров
+        </button>
       </tui-tabs>
     </div>
 

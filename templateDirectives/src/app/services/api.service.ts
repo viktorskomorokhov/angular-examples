@@ -53,11 +53,17 @@ export class ApiService {
     responseType: 'json', //'text' | 'blob | 'arraybuffer'
     withCredentials: false,
   };
+  getToDoReq(): Observable<IToDo[]> {
+   
+    return this.http.request<IToDo[]>('GET',`${this.baseApi}/todos/`);
+  }
   /**
    * Метод GET Принимает два параметра: url и options?:
    *
    */
+
   getToDos(): Observable<IToDo[]> {
+    this.http.request('GET',`${this.baseApi}/todos/`)
     return this.http.get<IToDo[]>(`${this.baseApi}/todos/`);
   }
   getToDosResponse(): Observable<HttpResponse<IToDo[]>> {

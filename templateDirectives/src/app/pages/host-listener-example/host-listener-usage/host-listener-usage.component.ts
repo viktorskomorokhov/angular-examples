@@ -61,11 +61,10 @@ export class HostListenerUsageComponent  {
 //  }
  @HostListener('window:keydown.escape', [
   '$event',
-  '$message'
+  '$event.target'
 ])
- updateValueFiltered(event: KeyboardEvent, message:string) {
-  console.log(message);
-  
+ updateValueFiltered(event: KeyboardEvent, target:any) {
+  console.log(target);
    console.log(event);
    
  }
